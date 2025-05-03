@@ -7,31 +7,26 @@ exports.createPost = async (postData) => {
     await post.save();
 }
 
-//댓글목록조회 pagnation
-exports.getAllComments = async (postId) => {
-    const comments = Comment.findByPostId(postId);
-    return comments;
-}
-
+//댓글목록조회
 exports.getAllPosts = async () => {
     const posts = Post.find();
     return posts
 }
 
-//게시글 수정
-exports.updateComment = async (id, updateData) => {
-    await Comment.findByIdAndUpdate(id, updateData, {
-        new: true,
-        runValidators: true
-    });
+//댓글 조회
+exports.getPost = async (id) => {
+    const post = Post.findById(id);
+    return post;
 }
+
+//게시글 수정
 exports.updatePost = async (id, postUpdate) => {
     await Post.findByIdAndUpdate(id, postUpdate, {
         new: true,
         runValidators: true
     });
-
 }
+
 //댓글삭제
 exports.updateComment = async (id) => {
     await Comment.findByIdAndDelete(id);
