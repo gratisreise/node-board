@@ -9,8 +9,8 @@ exports.createComment = async (commentData) => {
 }
 
 //댓글목록조회
-exports.getAllComments = async (postId) => {
-    const comments = Comment.findByPostId(postId);
+exports.getAllComments = async (id) => {
+    const comments = Comment.find({ postId: id });
     return comments;
 }
 
