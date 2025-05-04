@@ -1,6 +1,5 @@
 const User = require('../models/user.mode');
 
-
 //유저생성
 exports.createUser = async (userData) => {
     const user = new User(userData);

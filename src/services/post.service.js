@@ -21,13 +21,10 @@ exports.getPost = async (id) => {
 
 //게시글 수정
 exports.updatePost = async (id, postUpdate) => {
-    await Post.findByIdAndUpdate(id, postUpdate, {
-        new: true,
-        runValidators: true
-    });
+    await Post.findByIdAndUpdate(id, postUpdate);
 }
 
-//댓글삭제
-exports.updateComment = async (id) => {
-    await Comment.findByIdAndDelete(id);
+//게시글 삭제
+exports.deletePost = async (id) => {
+    await Post.findByIdAndDelete(id);
 }
