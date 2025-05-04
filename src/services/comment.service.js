@@ -16,13 +16,10 @@ exports.getAllComments = async (id) => {
 
 //댓글수정
 exports.updateComment = async (id, updateData) => {
-    await Comment.findByIdAndDelete(id, updateData, {
-        new: true,
-        runValidators: true
-    });
+    await Comment.findByIdAndUpdate(id, updateData);
 }
 
 //댓글삭제
-exports.updateComment = async (id) => {
+exports.deleteComment = async (id) => {
     await Comment.findByIdAndDelete(id);
 }
