@@ -2,11 +2,7 @@ const express = require('express')
 const userRoutes = require('./routes/user.route')
 const postRoutes = require('./routes/post.route')
 const commentRoutes = require('./routes/comment.route')
-const connectDB = require('./config/database');
 const cors = require('cors');
-
-dotenv.config();
-connectDB();
 
 const app = express();
 
