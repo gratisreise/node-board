@@ -50,8 +50,8 @@ Node.js 기반의 RESTful API로, 게시판 애플리케이션을 구현하여 �
 - `DELETE /api/comments/:id`: 댓글 삭제
 
 ## 디렉토리 구조
-
-.
+```
+project-root/
 ├── node_modules/                  # 프로젝트 의존성 모듈
 ├── src/
 │   ├── app.js                     # Express 앱 설정
@@ -87,3 +87,4 @@ Node.js 기반의 RESTful API로, 게시판 애플리케이션을 구현하여 �
 ├── package.json                   # 프로젝트 메타/의존성/스크립트
 ├── package-lock.json              # 의존성 고정 파일
 └── README.md                      # 프로젝트 설명 파일
+```
