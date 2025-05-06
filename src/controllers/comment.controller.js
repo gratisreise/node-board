@@ -9,7 +9,7 @@ exports.createComment = async (req, res) => {
 
 //댓글목록조회
 exports.getAllComments = async (req, res) => {
-    const comments = await commentService.getAllComments(req.params.id)
+    const comments = await commentService.getAllComments(req.params.postId)
     res.json(responseService.getDataResult(comments))
 }
 
